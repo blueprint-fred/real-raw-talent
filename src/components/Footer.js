@@ -8,7 +8,7 @@ const FooterPage = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow center className="black-text">
           <MDBCol md="6">
-            <MDBRow center>
+            <MDBRow className="pb-4" center>
               <MDBCol lg="2" md="2" size="3">
                 <Link to="/" className="black-text">Dojo</Link>
               </MDBCol>
