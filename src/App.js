@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import FooterPage from './components/Footer'
 import Navbar from './components/Navbar'
 import HomePage from './pages'
 import AboutPage from './pages/about'
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/discover" component={DiscoverPage}/>
         <Route path="/contact" component={ContactPage}/>
       </Switch>
+      <FooterPage/>
     </Router>
   )
 }
