@@ -39,7 +39,7 @@ const AboutPage = () => {
                 </MDBCol>
             </MDBRow>
             <MDBRow className="pt-5 pb-3 mb-3 mt-5">
-                <MDBCol>
+                <MDBCol className="py-3 py-lg-0 py-md-0" md="6" lg="6">
                     <a href="#linktodojohere">
                         <Card 
                             title="Dojo"
@@ -60,7 +60,7 @@ const AboutPage = () => {
                         </Card>
                     </a>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className="py-3 py-lg-0 py-md-0" md="6" lg="6">
                     <a href="#aitlinkhere">
                         <Card
                             title="DAMM"
@@ -86,7 +86,7 @@ const AboutPage = () => {
                 </MDBCol>
             </MDBRow>
             <MDBRow className="py-3 my-3">
-                <MDBCol>
+                <MDBCol className="py-3 py-lg-0 py-md-0" md="6" lg="6">
                     <a href="#devasukilink">
                         <Card
                             title="Devasuki"
@@ -109,7 +109,7 @@ Born from the passion of the formidable partnership between a mother and daughte
                         </Card>
                     </a>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className="py-3 py-lg-0 py-md-0" md="6" lg="6">
                     <a href="#dammlink">
                         <Card
                         title="Lucas-Handshake"
