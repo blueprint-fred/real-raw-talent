@@ -11,7 +11,7 @@ import brand from '../images/favicon-32x32.png';
             <MDBNavbarBrand>
             <img src={brand} alt=""/>
             <strong className="black-text px-2 font-weight-bold special-font">
-                Raw Real Talent
+                Real Raw Talent
                 </strong>
             </MDBNavbarBrand>
             <MDBNavbarToggler onClick={()=>setCollapse(!collapse)} />

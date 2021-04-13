@@ -33,7 +33,7 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} <a href="#lucasallenwebsitehere"> Raw Real Talent by Lucas Allen </a> · All Right Reserved. Read Raw Real Talent Privacy Policy and Terms of Service 
+          &copy; {new Date().getFullYear()} <a href="#lucasallenwebsitehere"> Real Raw Talent by Lucas Allen </a> · All Right Reserved. Read Real Raw Talent Privacy Policy and Terms of Service 
         </MDBContainer>
       </div>
     </MDBFooter>
