@@ -45,6 +45,11 @@ const DiscoverPage = () => {
 
     // const onChange = e => setFormData({ [e.target.name]: e.target.value })
 
+    const closeToast = () => {
+        toaster.clear(toastKey);
+        setToastKey(null);
+    };
+
     const onSubmit = e => {
         e.preventDefault();
         setLoading(true);
@@ -84,7 +89,8 @@ const DiscoverPage = () => {
                     <MDBCol md="6" lg="6">
                         {valid !== null && !valid && <MDBAnimation type="slideInDown">
                             <div className="text-center validation mx-auto py-2">
-                                <Toast      
+                                <Toast
+                                    onClick={closeToast}
                                     overrides={{
                                         Body: {
                                             style: ({ $theme }) => ({ width: `100%` })
