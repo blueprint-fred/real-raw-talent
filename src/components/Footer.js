@@ -13,9 +13,6 @@ const FooterPage = () => {
                 <Link to="/" className="black-text">Dojo</Link>
               </MDBCol>
               <MDBCol lg="2" md="2" size="3">
-                <a href="https://blueprintbusinesssolutionscorp.com/" className="black-text">Blueprint</a>
-              </MDBCol>
-              <MDBCol lg="2" md="2" size="3">
                 <Link to="/" className="black-text">Home</Link>
               </MDBCol>
               <MDBCol lg="2" md="2" size="3">
@@ -26,6 +23,9 @@ const FooterPage = () => {
               </MDBCol>
               <MDBCol lg="2" md="2" size="3">
                 <Link to="/contact" className="black-text">Contact</Link>
+              </MDBCol>
+              <MDBCol lg="2" md="2" size="3">
+                <Link to="/privacy-policy" className="black-text">Privacy Policy</Link>
               </MDBCol>
             </MDBRow>
           </MDBCol>

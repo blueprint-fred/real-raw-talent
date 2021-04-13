@@ -6,6 +6,7 @@ import HomePage from './pages'
 import AboutPage from './pages/about'
 import ContactPage from './pages/contact'
 import DiscoverPage from './pages/discover'
+import PrivacyPolicyPage from './pages/privacy-policy'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/about" component={AboutPage}/>
         <Route path="/discover" component={DiscoverPage}/>
         <Route path="/contact" component={ContactPage}/>
+        <Route path="/privacy-policy" component={PrivacyPolicyPage}/>
       </Switch>
       <FooterPage/>
     </Router>
