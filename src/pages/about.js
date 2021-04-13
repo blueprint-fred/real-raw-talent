@@ -40,102 +40,100 @@ const AboutPage = () => {
             </MDBRow>
             <MDBRow className="pt-5 pb-3 mb-3 mt-5">
                 <MDBCol>
-                    <Card>
-                        <StyledBody>
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                        </StyledBody>
-                        {/* <StyledAction>
-                            <Button
+                    <a href="#linktodojohere">
+                        <Card 
+                            title="Dojo"
                             overrides={{
-                                BaseButton: { style: { width: "100%" } }
-                            }}
+                                HeaderImage: {
+                                    style: ({ $theme }) => ({
+                                        width: `100%`
+                                    })
+                                    }
+                                }}
+                            headerImage="https://images.pexels.com/photos/4050302/pexels-photo-4050302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                             >
-                            Button Label
-                            </Button>
-                        </StyledAction> */}
-                    </Card>
+                            <StyledBody>
+                            It is an Interactive Training Management Platform that leverages modern technologies to present boring and tedious information in an interactive, fun and practical way. the DOJO way!
+
+                            DOJO Gamification & Interactive Learning Management System which provides a framework for the Seito to Learn Katas with Senseis in the DOJO. Prizes include Black Belts and other Rewards and Attainment.
+                            </StyledBody>
+                        </Card>
+                    </a>
                 </MDBCol>
                 <MDBCol>
-                    <Card>
-                        <StyledBody>
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                        </StyledBody>
-                        {/* <StyledAction>
-                            <Button
+                    <a href="#aitlinkhere">
+                        <Card
+                            title="DAMM"
                             overrides={{
-                                BaseButton: { style: { width: "100%" } }
-                            }}
-                            >
-                            Button Label
-                            </Button>
-                        </StyledAction> */}
-                    </Card>
+                                HeaderImage: {
+                                    style: ({ $theme }) => ({
+                                        width: `100%`
+                                    })
+                                    }
+                                }}
+                            headerImage="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        >
+                            <StyledBody>
+                                Stands for Digital Asset Multimedia Management. A tool to manage your images, videos and etc digitaly.
+
+                                Proin ut dui sed metus pharetra hend rerit vel non
+                                mi. Nulla ornare faucibus ex, non facilisis nisl.
+                                Proin ut dui sed metus pharetra hend rerit vel non
+                                mi. Nulla ornare faucibus ex, non facilisis nisl.
+                            </StyledBody>
+                        </Card>
+                    </a>
                 </MDBCol>
             </MDBRow>
             <MDBRow className="py-3 my-3">
                 <MDBCol>
-                    <Card>
-                        <StyledBody>
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                        </StyledBody>
-                        {/* <StyledAction>
-                            <Button
+                    <a href="#devasukilink">
+                        <Card
+                            title="Devasuki"
                             overrides={{
-                                BaseButton: { style: { width: "100%" } }
-                            }}
-                            >
-                            Button Label
-                            </Button>
-                        </StyledAction> */}
-                    </Card>
+                                HeaderImage: {
+                                    style: ({ $theme }) => ({
+                                        width: `100%`
+                                    })
+                                    }
+                                }}
+                            headerImage="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        >
+                            <StyledBody>
+                            Our passion for design, quality and style.
+Capturing the essence of Ibiza, by Devasuki.
+exotic, sensuous, world of glamour and conciouse fashion.
+
+Born from the passion of the formidable partnership between a mother and daughter, who have travelled the world together, experiencing ancient cultures, capturing the colourful world of silks, beads, pearls, fabrics, heady scents and rich, luxurious textiles, along with the sheer beauty of the places they visited became inspired to create their very own label together.
+                            </StyledBody>
+                        </Card>
+                    </a>
                 </MDBCol>
                 <MDBCol>
-                    <Card>
-                        <StyledBody>
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                            Proin ut dui sed metus pharetra hend rerit vel non
-                            mi. Nulla ornare faucibus ex, non facilisis nisl.
-                        </StyledBody>
-                        {/* <StyledAction>
-                            <Button
-                            overrides={{
-                                BaseButton: { style: { width: "100%" } }
+                    <a href="#dammlink">
+                        <Card
+                        title="Lucas-Handshake"
+                        overrides={{
+                            HeaderImage: {
+                                style: ({ $theme }) => ({
+                                    width: `100%`
+                                })
+                                }
                             }}
-                            >
-                            Button Label
-                            </Button>
-                        </StyledAction> */}
-                    </Card>
+                        headerImage="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        >
+                            <StyledBody>
+                            A Web Application with social integrations enabled to provide recognition to your content.
+                                Proin ut dui sed metus pharetra hend rerit vel non
+                                mi. Nulla ornare faucibus ex, non facilisis nisl.
+
+                                Proin ut dui sed metus pharetra hend rerit vel non
+                                mi. Nulla ornare faucibus ex, non facilisis nisl.
+                                Proin ut dui sed metus pharetra hend rerit vel non
+                                mi. Nulla ornare faucibus ex, non facilisis nisl.
+                            </StyledBody>
+                        </Card>
+                    </a>
                 </MDBCol>
             </MDBRow>
             <MDBRow center className="py-5 my-5">
