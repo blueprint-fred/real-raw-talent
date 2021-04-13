@@ -24,6 +24,11 @@ const ContactPage = () => {
     const showToast = () =>
     setToastKey(toaster.positive('Message Successfully Sent!'));
 
+    const closeToast = () => {
+        toaster.clear(toastKey);
+        setToastKey(null);
+    };
+
     const loadingProps = {
         isLoading: loading ? true : false,
         disabled: loading ? true : false
@@ -42,7 +47,7 @@ const ContactPage = () => {
 
     return (
         <MDBContainer className="py-5 my-5">
-            <ToasterContainer autoHideDuration={1500}/>
+            <ToasterContainer onClick={closeToast} autoHideDuration={1500}/>
             <h1 className="cursive display-4 text-center">Drop Us a Line</h1>
             <form onSubmit={e=>onSubmit(e)}>
             <MDBRow center>
