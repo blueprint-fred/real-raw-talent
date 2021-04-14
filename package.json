@@ -7,6 +7,8 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "baseui": "^9.112.0",
+    "emailjs-com": "^2.6.4",
+    "formik": "^2.2.6",
     "mdbreact": "^5.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -17,7 +19,8 @@
     "slick-carousel": "^1.8.1",
     "styletron-engine-atomic": "^1.4.7",
     "styletron-react": "^6.0.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
