@@ -7,3 +7,7 @@ body{
 .cursive{
   font-family: 'Amiri', serif;
 }
+.brand-img{
+  width: 40px;
+  padding-right: .5rem;
+}

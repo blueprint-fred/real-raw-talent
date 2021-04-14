@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
     MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
-import brand from '../images/favicon-32x32.png';
+import brand from '../images/logo-2.png';
 
     const NavigationBar = () => {
     const [collapse, setCollapse] = useState(false);
@@ -9,7 +9,7 @@ import brand from '../images/favicon-32x32.png';
         <>
         <MDBNavbar color="light-color" className="p-4 z-depth-0" light expand="md">
             <MDBNavbarBrand>
-            <img src={brand} alt=""/>
+            <img className="brand-img" src={brand} alt=""/>
             <strong className="black-text px-2 font-weight-bold special-font">
                 Real Raw Talent
                 </strong>
