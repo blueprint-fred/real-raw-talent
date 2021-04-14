@@ -14,14 +14,16 @@ import {FileUploader} from 'baseui/file-uploader';
 import { RadioGroup, Radio, ALIGN } from "baseui/radio";
 
 const DiscoverPage = () => {
+
     const [valid, setValid] = useState(null);
     const [item, setItem] = useLocalStorage('email', '');
     const [loading, setLoading] = useState(false);
     const [step, setStep] = useState(1);
     const [checked, setChecked] = useState(false);
+    const [consent, setConsent] = useLocalStorage('terms-consent', false)
     const [value, setValue] = useState("3");
-
     const [isUploading, setIsUploading] = useState(false);
+    const [upload, setUpload] = useState(false);
     const timeoutId = useRef(null);
 
 
@@ -29,21 +31,11 @@ const DiscoverPage = () => {
         setIsUploading(false);
         clearTimeout(timeoutId.current);
       }
-      // startProgress is only illustrative. Use the progress info returned
-      // from your upload endpoint. This example shows how the file-uploader operates
-      // if there is no progress info available.
+
     const startProgress = () => {
         setIsUploading(true);
         timeoutId.current = setTimeout(reset, 4000);
     }
-    
-    // const [formData, setFormData] = useState({
-    //     email: ""
-    // });
-
-    // const { email } = formData
-
-    // const onChange = e => setFormData({ [e.target.name]: e.target.value })
 
     const onSubmit = e => {
         e.preventDefault();
@@ -66,11 +58,28 @@ const DiscoverPage = () => {
                 },1500)
             }
         }
+        else{
+            setTimeout(() =>{
+                setValid(false);
+                setLoading(false);
+                setItem('');
+            },1500)
+        }
+    }
+
+    const consentApproval = e => {
+        e.preventDefault();
+        setConsent(checked);
+        setStep(3)
     }
 
     const loadingProps = {
-        disabled: loading ? true : false,
+        disabled: loading ? true  : false,
         isLoading: loading ? true : false
+    }
+
+    const loadingPropsCheckbox = {
+        disabled: checked ? false: true
     }
 
     return (
@@ -127,7 +136,7 @@ const DiscoverPage = () => {
                     </MDBCol>
                 </MDBRow>
             </form>}
-            {step === 2 && <div>
+            {step === 2 && <form onSubmit={e=>consentApproval(e)}>
                 <MDBRow center>
                     <MDBCol md="8" lg="8">
                         <TermsAndConditions/>
@@ -140,7 +149,7 @@ const DiscoverPage = () => {
                             onChange={e => setChecked(e.target.checked)}
                             labelPlacement={LABEL_PLACEMENT.right}
                         >
-                            I agree to these terms and conditions
+                            I agree to these terms and conditions {<div hidden>{consent}</div>}
                         </Checkbox>
                     </MDBCol>
                 </MDBRow>
@@ -150,16 +159,16 @@ const DiscoverPage = () => {
                             endEnhancer={() => <ArrowRight size={24} />}
                             className="w-100"
                             size={SIZE.large}
-                            type="buton"
+                            type="submit"
                             shape={SHAPE.pill}
-                            {...loadingProps}
-                            onClick={()=>setStep(3)}
+                            {...loadingPropsCheckbox}
+                            
                         >
                             Proceed
                         </Button>
                     </MDBCol>
                 </MDBRow>
-            </div>}
+            </form>}
             {step === 3 && <div>
                 <MDBRow center>
                     <MDBCol md="8" lg="8">
@@ -167,6 +176,9 @@ const DiscoverPage = () => {
                         onCancel={reset}
                         onDrop={(acceptedFiles, rejectedFiles) => {
                             // handle file upload...
+                            setTimeout(() => {
+                                setUpload(true);
+                            }, 4000)
                             startProgress();
                         }}
                         progressMessage={
@@ -183,7 +195,9 @@ const DiscoverPage = () => {
                             size={SIZE.large}
                             type="buton"
                             shape={SHAPE.pill}
-                            {...loadingProps}
+                            {...{
+                                disabled: upload ? false: true
+                            }}
                             onClick={()=>setStep(4)}
                         >
                             Proceed
