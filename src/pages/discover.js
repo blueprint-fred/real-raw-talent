@@ -27,7 +27,7 @@ const DiscoverPage = () => {
     const [isUploading, setIsUploading] = useState(false);
     const [upload, setUpload] = useState(false);
     const timeoutId = useRef(null);
-
+    const [errorMessage, setErrorMessage] = useState('')
 
     const reset = () => {
         setIsUploading(false);
@@ -61,16 +61,31 @@ const DiscoverPage = () => {
                 };
 
                 fetch("https://api.tadabase.io/api/v1/data-tables/o6WQbbdQnB/records", requestOptions)
-                .then(response => response.text())
+                .then(response => response.json())
                 .then(result => {
-                    console.log(result)
-                    setLoading(false);
-                    setValid(true);
-                    setTimeout(() =>{
-                        setStep(2);
-                    },1000)
+                    if(result.type === 'error'){
+                        console.log("error"+result.type)
+                        setValid(false);
+                        setLoading(false);
+                        setItem('');
+                        setErrorMessage("Your email needs to be a valid email address: already taken")
+                    }
+                    else{
+                        console.log("result"+result)
+                        setLoading(false);
+                        setValid(true);
+                        setTimeout(() =>{
+                            setStep(2);
+                        },1000)
+                    }
                 })
-                .catch(error => console.log('error', error));
+                .catch(error => {
+                    console.log("error"+error)
+                    setValid(false);
+                    setLoading(false);
+                    setItem('');
+                    setErrorMessage("Your email needs to be a valid email address: already taken")
+                });
             }
             else{
                 setTimeout(() =>{
@@ -121,7 +136,7 @@ const DiscoverPage = () => {
                                             style: ({ $theme }) => ({ width: `100%` })
                                         }
                                     }} 
-                                className="w-100" kind={KIND.negative}>Your email needs to be a valid email address</Toast>
+                                className="w-100" kind={KIND.negative}>{errorMessage !== ''? errorMessage : `Your email needs to be a valid email address`}</Toast>
                             </div>
                         </MDBAnimation>}
                         {valid !== null && valid && <MDBAnimation type="slideInDown">
