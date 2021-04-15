@@ -44,13 +44,33 @@ const DiscoverPage = () => {
         setLoading(true);
         if(item.length !== 0){
             if(item.includes("@")){
-                setTimeout(() =>{
+                var myHeaders = new Headers();
+                myHeaders.append("X-Tadabase-App-id", "5nQxPZRQxY");
+                myHeaders.append("X-Tadabase-App-Key", "C0V5T2wTsmS5");
+                myHeaders.append("X-Tadabase-App-Secret", "ZLvRPoG8l3C8ZvPeHSXmYrd4HpVnSagE	");
+                myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+                var formdata = new FormData();
+                formdata.append("field_2362", item);
+
+                var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: `field_2362=${item}`,
+                redirect: 'follow'
+                };
+
+                fetch("https://api.tadabase.io/api/v1/data-tables/o6WQbbdQnB/records", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result)
                     setLoading(false);
                     setValid(true);
                     setTimeout(() =>{
                         setStep(2);
                     },1000)
-                },1500)
+                })
+                .catch(error => console.log('error', error));
             }
             else{
                 setTimeout(() =>{
@@ -131,6 +151,7 @@ const DiscoverPage = () => {
                             className="w-100"
                             size={SIZE.large}
                             shape={SHAPE.pill}
+                            type="submit"
                             {...loadingProps}
                         >
                             Proceed
