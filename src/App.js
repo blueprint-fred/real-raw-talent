@@ -7,6 +7,7 @@ import AboutPage from './pages/about'
 import ContactPage from './pages/contact'
 import DiscoverPage from './pages/discover'
 import PrivacyPolicyPage from './pages/privacy-policy'
+import VerfiyEmailPage from './pages/verify'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/discover" component={DiscoverPage}/>
         <Route path="/contact" component={ContactPage}/>
         <Route path="/privacy-policy" component={PrivacyPolicyPage}/>
+        <Route path="/verify-email" component={VerfiyEmailPage}/>
       </Switch>
       <FooterPage/>
     </Router>
