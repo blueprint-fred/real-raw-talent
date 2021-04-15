@@ -12,6 +12,8 @@ import {
   } from "baseui/checkbox";
 import {FileUploader} from 'baseui/file-uploader';
 import { RadioGroup, Radio, ALIGN } from "baseui/radio";
+import ProgressiveImage from 'react-progressive-image'
+import placeholderImage from '../images/real-raw-talent-preview.jpeg';
 
 const DiscoverPage = () => {
 
@@ -262,13 +264,19 @@ const DiscoverPage = () => {
                     <MDBCol md="8" lg="8">
                         <MDBRow center>
                             <MDBCol className="py-3 py-lg-0 py-md-0" md="4" lg="4">
-                                <img alt="preview song" src="https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="img-fluid"/>
+                                <ProgressiveImage src={"https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} placeholder={placeholderImage}>
+                                    {(src, loading) => <img className="img-fluid" style={{ filter: loading && "blur(10px)" }} src={src} alt=""/>}
+                                </ProgressiveImage>
                             </MDBCol>    
                             <MDBCol className="py-3 py-lg-0 py-md-0" md="4" lg="4">
-                                <img alt="preview song" src="https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="img-fluid"/>
+                                <ProgressiveImage src={"https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} placeholder={placeholderImage}>
+                                    {(src, loading) => <img className="img-fluid" style={{ filter: loading && "blur(10px)" }} src={src} alt=""/>}
+                                </ProgressiveImage>
                             </MDBCol>   
                             <MDBCol className="py-3 py-lg-0 py-md-0" md="4" lg="4">
-                                <img alt="preview song" src="https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="img-fluid"/>
+                                <ProgressiveImage src={"https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} placeholder={placeholderImage}>
+                                    {(src, loading) => <img className="img-fluid" style={{ filter: loading && "blur(10px)" }} src={src} alt=""/>}
+                                </ProgressiveImage>
                             </MDBCol>   
                         </MDBRow>
                     </MDBCol>
