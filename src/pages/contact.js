@@ -8,6 +8,9 @@ import emailjs from 'emailjs-com';
 import {Toast, KIND} from 'baseui/toast';
 import { Formik } from "formik";
 import * as Yup from "yup";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const recaptchaRef = React.createRef();
 
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
@@ -39,6 +42,7 @@ const ContactPage = () => {
     })
 
     const onSubmit = async values =>{
+        recaptchaRef.current.execute();
         await new Promise(resolve => setTimeout(resolve, 2000));
         emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, values)
         .then(function(response) {
@@ -125,6 +129,12 @@ const ContactPage = () => {
                                             onChange={handleChange}
                                             placeholder="Your Message"
                                             clearOnEscape
+                                        />
+                                        <ReCAPTCHA
+                                            ref={recaptchaRef}
+                                            size="invisible"
+                                            sitekey={process.env.REACT_APP_RECAPTCHA_SECRET}
+                                            onChange={handleChange}
                                         />
                                     </MDBCol>
                                 </MDBRow>
